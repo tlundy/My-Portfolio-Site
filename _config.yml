@@ -10,11 +10,11 @@ locale                   : "en"
 title                    : "Tyler Lundy: Portfolio"
 title_separator          : "-"
 name                     : "Tyler Lundy"
-description              : "Portfolio of data science and other online projects."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "Everybody starts somehwere."
+url                      : "http://localhost:4000" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   : "teaser1.jpeg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -79,17 +79,17 @@ analytics:
 author:
   name             : "Tyler Lundy"
   avatar           : "bio-photo.jpg"
-  bio              : "Everybody starts somehwere."
+  bio              : "Portfolio of data science and other online projects."
   location         : "California"
   email            :
-  uri              :
+  uri              : "http://tlundy.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "tlundy"
   google_plus      :
   keybase          :
   instagram        :
@@ -171,7 +171,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -226,3 +226,18 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+
+#Front Matter defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layouts: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      related: true
